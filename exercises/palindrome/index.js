@@ -20,3 +20,11 @@ function palindrome(str) {
 }
 
 module.exports = palindrome
+
+//using the .every() array method
+
+// function palindrome(str) {
+//   return str.split('').every((char, i) => {
+//     return char === str[str.length - i - 1]
+//   })
+// }
