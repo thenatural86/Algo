@@ -9,7 +9,7 @@
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 function chunk(array, size) {
-  // create a new array for array chunks to go into
+  // create a new array to hold chunks of data
   let newArr = []
 
   // iterate over array
@@ -19,10 +19,10 @@ function chunk(array, size) {
 
     // if last element doesn't exist or is its length is equal to size
     if (!last || last.length === size) {
-      // push element into new array
+      // push the current element into new array
       newArr.push([element])
     } else {
-      // othewerwise add current element into last
+      // otherwise add current element into last
       last.push(element)
     }
   }
