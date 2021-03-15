@@ -20,7 +20,6 @@ function chunk(array, size) {
       last.push(element)
     }
   }
-
   return newArr
 }
 
