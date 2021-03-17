@@ -16,18 +16,19 @@ function anagrams(stringA, stringB) {
   let charMap2 = {}
 
   for (let char of string1) {
-    charMap1[char] = charMap1[char] + 1 || 1
+    charMap1[char] = 1 || charMap1[char]++
   }
-
   for (let char of string2) {
-    charMap2[char] = charMap2[char] + 1 || 1
+    charMap2[char] = 1 || charMap2[char]++
   }
 
-  if (Object.keys(charMap1).length !== Object.keys(charMap2).length) {
-    return false
-  }
   for (let char in charMap1) {
-    if (charMap1[char] !== charMap2[char]) return false
+    if (Object.keys(charMap1).length !== Object.keys(charMap2).length) {
+      return false
+    }
+    if (charMap1[char] !== charMap2[char]) {
+      return false
+    }
   }
   return true
 }
