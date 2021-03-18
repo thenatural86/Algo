@@ -12,10 +12,11 @@ function anagrams(stringA, stringB) {
   let charMap1 = helper(stringA)
   let charMap2 = helper(stringB)
 
+  if (Object.keys(charMap1).length !== Object.keys(charMap2).length) {
+    return false
+  }
+
   for (let char in charMap1) {
-    if (Object.keys(charMap1).length !== Object.keys(charMap2).length) {
-      return false
-    }
     if (charMap1[char] !== charMap2[char]) {
       return false
     }
