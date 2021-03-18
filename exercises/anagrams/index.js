@@ -9,18 +9,8 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  let string1 = stringA.replace(/[^\w]/g, '').toLowerCase()
-  let string2 = stringB.replace(/[^\w]/g, '').toLowerCase()
-
-  let charMap1 = {}
-  let charMap2 = {}
-
-  for (let char of string1) {
-    charMap1[char] = 1 || charMap1[char]++
-  }
-  for (let char of string2) {
-    charMap2[char] = 1 || charMap2[char]++
-  }
+  let charMap1 = helper(stringA)
+  let charMap2 = helper(stringB)
 
   for (let char in charMap1) {
     if (Object.keys(charMap1).length !== Object.keys(charMap2).length) {
@@ -31,6 +21,15 @@ function anagrams(stringA, stringB) {
     }
   }
   return true
+}
+
+function helper(str) {
+  let charMap = {}
+
+  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+    charMap[char] = 1 || charMap[char]++
+  }
+  return charMap
 }
 
 module.exports = anagrams
