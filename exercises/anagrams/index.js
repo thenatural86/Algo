@@ -1,5 +1,5 @@
 // --- Directions
-// Check to see if two provided strings are anagrams of eachother.
+// Check to see if two provided strings are anagrams of each other.
 // One string is an anagram of another if it uses the same characters
 // in the same quantity. Only consider characters, not spaces
 // or punctuation.  Consider capital letters to be the same as lower case
@@ -16,18 +16,17 @@ function anagrams(stringA, stringB) {
     return false
   }
 
-  for (let char in charMap1) {
+  for (char in charMap1) {
     if (charMap1[char] !== charMap2[char]) {
       return false
     }
   }
   return true
 }
-
 function helper(str) {
   let charMap = {}
 
-  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+  for (let char of str.replace(/[^\w]g/, '').toLowerCase()) {
     charMap[char] = 1 || charMap[char]++
   }
   return charMap
