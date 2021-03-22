@@ -19,15 +19,15 @@
 
 function steps(n) {
   for (let row = 0; row < n; row++) {
-    let stair = ''
+    let stairs = ''
     for (let col = 0; col < n; col++) {
       if (col <= row) {
-        stair += '#'
+        stairs += '#'
       } else {
-        stair += ' '
+        stairs += ' '
       }
     }
-    console.log(stair)
+    console.log(stairs)
   }
 }
 
