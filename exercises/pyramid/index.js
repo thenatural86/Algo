@@ -17,7 +17,21 @@
 //
 //
 
-function pyramid(n) {}
+function pyramid(n) {
+  let mid = Math.floor((2 * n - 1) / 2)
+
+  for (let i = 0; i < n; i++) {
+    let steps = ''
+    for (let j = 0; j < 2 * n - 1; j++) {
+      if (mid - i <= j && mid + i >= j) {
+        steps += '#'
+      } else {
+        steps += ' '
+      }
+    }
+    console.log(steps)
+  }
+}
 
 module.exports = pyramid
 //
