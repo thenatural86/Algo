@@ -8,21 +8,20 @@
 function maxChar(str) {
   let charMap = {}
   let max = 0
-  let maxChar = 0
+  let maxChar = ''
 
   for (let char of str) {
     charMap[char] = 1 || charMap[char]++
   }
 
-  for (char in charMap) {
+  for (let char in charMap) {
     if (charMap[char] > max) {
       max = charMap[char]
       maxChar = char
     }
+    return maxChar
   }
-  return maxChar
 }
-
 module.exports = maxChar
 //
 //
