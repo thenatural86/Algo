@@ -13,8 +13,9 @@ function palindrome(str) {
   for (let char of str) {
     rev = char + rev
   }
-  if (rev === str) return true
-  else {
+  if (rev === str) {
+    return true
+  } else {
     return false
   }
 }
