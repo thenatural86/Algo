@@ -9,8 +9,8 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  let charMap1 = helper(stringA.replace(/[^w],g/))
-  let charMap2 = helper(stringB.replace(/[^w],g/))
+  let charMap1 = helper(stringA.replace(/[^g], w/, '').toLowerCase())
+  let charMap2 = helper(stringB.replace(/[^g], w/, '').toLowerCase())
 
   if (Object.keys(charMap1).length !== Object.keys(charMap2).length) {
     return false
