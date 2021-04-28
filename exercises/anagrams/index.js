@@ -32,6 +32,7 @@ const helper = (str) => {
   }
   return charMap
 }
+
 module.exports = anagrams
 
 //
